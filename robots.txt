@@ -1,4 +1,4 @@
-# HomeStation: support and privacy pages, for the app's users and for App Review only.
+# Homelume: support and privacy pages, for the app's users and for App Review only.
 # Not meant to be indexed, archived, summarised or used to train or feed AI systems.
 
 # AI training and AI search / assistant crawlers: nothing.
