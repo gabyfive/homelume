@@ -16,3 +16,17 @@
   });
   show(wanted);
 })();
+
+// The publisher's address, shown on request (it is not in the page's text).
+document.querySelectorAll('button[data-reveal]').forEach(function (button) {
+  button.addEventListener('click', function () {
+    try {
+      var bytes = Uint8Array.from(atob(button.getAttribute('data-reveal')), function (c) { return c.charCodeAt(0); });
+      var text = document.createElement('span');
+      text.textContent = new TextDecoder().decode(bytes);
+      text.tabIndex = -1;
+      button.replaceWith(text);
+      text.focus();
+    } catch (e) {}
+  });
+});
